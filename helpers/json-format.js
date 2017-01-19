@@ -1,9 +1,4 @@
-let _fs;
-try {
-  _fs = require('graceful-fs');
-} catch (_) {
-  _fs = require('fs');
-}
+import _fs from 'fs';
 
 export function writeFile(file, obj, options = {}, callback = () => {}) {
   const fs = options.fs || _fs;
@@ -11,7 +6,7 @@ export function writeFile(file, obj, options = {}, callback = () => {}) {
 
   let str = '';
   try {
-    str = JSON.stringify(obj, null, '\t') + '\n';
+    str = `${JSON.stringify(obj, null, '\t')}\n`;
   } catch (err) {
     if (callback) return callback(err, null);
   }

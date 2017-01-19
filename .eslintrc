@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "eslint:recommended"
+  ],
+  "rules": {
+    "no-comma-dangle":[
+    0],
+    "no-console":[0],
+    "no-unused-vars": [
+      2,
+      {
+        "varsIgnorePattern": "_.*",
+        "argsIgnorePattern": "_.*"
+      }
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": [
+  ],
+  "env": {
+    "node": true,
+    "es6": true
+    }
+}
